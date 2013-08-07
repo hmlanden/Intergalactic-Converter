@@ -1,0 +1,34 @@
+(POSSIBLE) WAYS TO IMPROVE EFFICIENCY/FUNCTIONALITY
+
+--In my program, I iterate over the data provided many times. I chose to do it this way,
+  after realizing that the longest number in Roman numerals is 19 digits long, and with 
+  the length of the unit names, probably the longest strings I would be dealing with
+  would be around 100 characters long. Since most of my heaviest repetition of iteration
+  deals with verifying the workability of Roman numeral combinations, I figured that this
+  was an okay approach--but there might be a faster way.
+  
+--The program would be easier to read if I had chosen to use collections to keep track of
+  the various data I was tracking--like if I'd parsed user input directly into a HashMap
+  for the units. However, as I said previously, I thought this approach was workable.
+  
+--I didn't catch all the different way things could go wrong with certain inputs. For 
+  example, in the case of the input for the units, I didn't take into account the chance
+  that the user might enter any extra spaces (like double space between units or an 
+  extra unit at the beginning).
+  
+--I was enjoying myself, trying to make all functions as multipurpose as possible. But 
+  with all those if statements, I may have hurt myself a little in terms of efficiency.
+  I could have figured out a way where I wouldn't have to continue iterating over the
+  numeral at a certain point.
+  
+--This program is also only set up to deal with 4 out of the 7 Roman numerals, the ones
+  that were required to produce the test input. But I could easily correct that--for example,
+  for my checkOneNumeral and isFollowedByLarger functions in my ConverterValidityChecks
+  class, I could easily use a Vector to store the problem numbers instead of just having
+  one problem number possible and calling the function multiple times.
+  
+--I could have probably consolidated the number of constants I had. I also probably could've
+  found a less convoluted way to handle addition/subtraction of Roman numerals rather than
+  my many if statements.
+  
+--I didn't close any of my inputStreams or BufferedReaders--I should've.
